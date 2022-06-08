@@ -1,0 +1,19 @@
+{% extends "AppPubg/padre.html" %}
+
+{% load static %}
+
+{% block contenido1 %}
+
+<div class="d-flex align-items-center row">
+    {% for map in maps %}
+    <div class="card shadow m-4 d-flex align-items-center" style="width: 19rem;">
+        <a href= {{map.link}} target="_blank" >
+            <img src={{map.link}} style="object-fit:cover ; height:300px ; width:300px ; " class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+            <p class="card-text" style="color: black">{{map}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
